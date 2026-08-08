@@ -1,328 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dongguan Huibang E-Commerce Co., Ltd. — China Sourcing & DDP Fulfillment</title>
-<link rel="icon" type="image/png" href="assets/logos/hbb_orbit.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dongguan HuiBang E-Commerce Co., Ltd. — China Sourcing & DDP Fulfillment</title>
 <style>
-  :root {
-    --bg: #0a0e1a;
-    --bg-soft: #111726;
-    --card: #151c2e;
-    --line: #232c44;
-    --gold: #f5a623;
-    --gold-soft: #f5a62322;
-    --text: #e8edf7;
-    --muted: #8b97b3;
-    --accent: #3b82f6;
+  :root{
+    --navy:#0b1f3a; --blue:#1c4fa0; --cyan:#27a3c4; --ink:#1a2332;
+    --gray:#5b6675; --bg:#f5f7fa; --line:#e3e8ef; --gold:#e0a93b;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-
-  /* Header */
-  header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(10,14,26,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .3px; }
-  .brand .logo {
-    width: 34px; height: 34px; border-radius: 8px;
-    background: linear-gradient(135deg, var(--gold), #ffce6a);
-    display: grid; place-items: center; color: #0a0e1a; font-weight: 800;
-  }
-  .brand .logo-img {
-    width: 38px; height: 38px; border-radius: 10px; display: block;
-    box-shadow: 0 2px 10px #f5a62333;
-  }
-  .brand small { display: block; font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: .5px; }
-  .nav a.cta {
-    background: var(--gold); color: #0a0e1a; font-weight: 700;
-    padding: 9px 18px; border-radius: 999px; font-size: 14px;
-  }
-  .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
-  .nav-links a:hover { color: var(--text); }
-
-  /* Hero */
-  .hero { padding: 90px 0 70px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before {
-    content: ""; position: absolute; inset: -40% 0 auto 0; height: 420px;
-    background: radial-gradient(ellipse at 50% 0%, #f5a62326, transparent 60%);
-  }
-  .badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    border: 1px solid var(--line); background: var(--bg-soft);
-    padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--muted);
-    margin-bottom: 22px;
-  }
-  .badge b { color: var(--gold); }
-  .hero h1 { font-size: 46px; line-height: 1.12; font-weight: 800; letter-spacing: -.5px; }
-  .hero h1 .hl { color: var(--gold); }
-  .hero p.sub { color: var(--muted); font-size: 18px; margin: 22px auto 0; max-width: 680px; }
-  .hero .actions { margin-top: 34px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn {
-    padding: 13px 26px; border-radius: 999px; font-weight: 700; font-size: 15px;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .btn.primary { background: var(--gold); color: #0a0e1a; }
-  .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px #f5a62344; }
-  .btn.ghost { border: 1px solid var(--line); color: var(--text); }
-  .btn.ghost:hover { border-color: var(--gold); }
-
-  /* Stats */
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; }
-  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 18px; text-align: center; }
-  .stat .num { font-size: 30px; font-weight: 800; color: var(--gold); }
-  .stat .lbl { font-size: 13px; color: var(--muted); margin-top: 6px; }
-
-  /* Sections */
-  section { padding: 72px 0; border-top: 1px solid var(--line); }
-  .sec-head { text-align: center; margin-bottom: 48px; }
-  .sec-head .kicker { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
-  .sec-head h2 { font-size: 32px; margin-top: 10px; font-weight: 800; }
-  .sec-head p { color: var(--muted); margin-top: 12px; max-width: 620px; margin-left: auto; margin-right: auto; }
-
-  /* About grid */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
-  .card h3 { font-size: 19px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-  .card p { color: var(--muted); font-size: 15px; }
-  .ic { width: 30px; height: 30px; border-radius: 8px; background: var(--gold-soft); color: var(--gold); display: grid; place-items: center; flex: none; }
-
-  /* Warehouse */
-  .wh-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-  .wh { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-  .wh .big { font-size: 26px; font-weight: 800; color: var(--gold); }
-  .wh h4 { margin: 10px 0 8px; font-size: 16px; }
-  .wh p { color: var(--muted); font-size: 14px; }
-
-  /* Services */
-  .svc { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
-  .svc .item { display: flex; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
-  .svc .item .n { font-size: 13px; color: var(--gold); font-weight: 800; }
-  .svc .item h4 { font-size: 17px; margin: 4px 0 6px; }
-  .svc .item p { color: var(--muted); font-size: 14px; }
-
-  /* Case */
-  .case { background: linear-gradient(135deg, #151c2e, #111726); border: 1px solid var(--line); border-radius: 18px; padding: 36px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
-  .case h3 { font-size: 22px; margin-bottom: 14px; }
-  .case ul { list-style: none; display: grid; gap: 12px; }
-  .case li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: 15px; }
-  .case li b { color: var(--text); }
-  .pricetag { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 24px; text-align: center; }
-  .pricetag .vs { color: var(--muted); font-size: 14px; }
-  .pricetag .ours { color: var(--gold); font-size: 40px; font-weight: 800; margin: 8px 0; }
-  .pricetag .comp { color: #ff6b6b; text-decoration: line-through; font-size: 20px; }
-  .pricetag .days { margin-top: 14px; font-size: 15px; color: var(--text); }
-
-  /* Why */
-  .why { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-  .why .w { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
-  .why .w h4 { font-size: 16px; margin: 12px 0 8px; }
-  .why .w p { color: var(--muted); font-size: 14px; }
-
-  /* Contact */
-  .contact { text-align: center; }
-  .contact .box { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 44px; max-width: 640px; margin: 0 auto; }
-  .contact h2 { font-size: 30px; }
-  .contact p { color: var(--muted); margin: 14px 0 26px; }
-  .wa { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #04140a; font-weight: 800; padding: 14px 30px; border-radius: 999px; font-size: 17px; }
-  .note { margin-top: 22px; font-size: 13px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 18px; }
-  .note b { color: var(--gold); }
-
-  footer { border-top: 1px solid var(--line); padding: 30px 0; color: var(--muted); font-size: 13px; text-align: center; }
-  footer b { color: var(--text); }
-
-  @media (max-width: 860px) {
-    .hero h1 { font-size: 34px; }
-    .stats { grid-template-columns: repeat(2,1fr); }
-    .grid-2, .svc, .wh-grid, .why, .case { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  a{color:var(--blue);text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,31,58,.96);backdrop-filter:blur(8px)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{color:#fff;font-weight:800;letter-spacing:.5px;font-size:18px}
+  .logo span{color:var(--cyan)}
+  .navlinks{display:flex;gap:26px}
+  .navlinks a{color:#cdd7e6;font-size:14px;font-weight:600}
+  .navlinks a:hover{color:#fff}
+  .cta{background:var(--cyan);color:#fff;padding:9px 18px;border-radius:8px;font-weight:700;font-size:14px}
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;overflow:hidden;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 24px}
+  .hero h1{font-size:40px;line-height:1.15;font-weight:800;margin-bottom:18px}
+  .hero p{font-size:17px;color:#cdd9ec;max-width:520px;margin-bottom:26px}
+  .hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 24px;border-radius:9px;font-weight:700;font-size:15px}
+  .btn.primary{background:var(--cyan);color:#fff}
+  .btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .heroart{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px}
+  /* STATS */
+  .stats{background:var(--bg);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:34px 18px;text-align:center;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .n{font-size:34px;font-weight:800;color:var(--blue)}
+  .stat .l{font-size:13px;color:var(--gray);margin-top:6px;letter-spacing:.3px}
+  /* SECTION */
+  section{padding:72px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+  .sec-head .ey{color:var(--cyan);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+  .sec-head h2{font-size:30px;font-weight:800;margin:10px 0 12px}
+  .sec-head p{color:var(--gray);font-size:15px}
+  /* ABOUT */
+  .about{background:var(--bg)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .about-grid h3{font-size:22px;margin-bottom:14px}
+  .about-grid p{color:#46505f;margin-bottom:14px}
+  .regbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+  .regbox .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .regbox .row:last-child{border-bottom:none}
+  .regbox .k{color:var(--gray)}
+  .regbox .v{font-weight:700}
+  /* FACILITY — real photo slots */
+  .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .shot{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background-size:cover;background-position:center;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;text-align:left;padding:18px;color:#fff}
+  .shot::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,.72),transparent 62%);z-index:1}
+  .shot .tag{position:relative;z-index:2;font-size:14px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+  .shot .hint{position:relative;z-index:2;font-size:12px;margin-top:4px;opacity:.92;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+  /* SERVICES */
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s}
+  .svc:hover{box-shadow:0 8px 28px rgba(11,31,58,.1);transform:translateY(-3px)}
+  .svc .ic{width:48px;height:48px;color:var(--blue);margin-bottom:14px}
+  .svc h4{font-size:17px;margin-bottom:8px}
+  .svc p{font-size:13.5px;color:var(--gray)}
+  /* CASE */
+  .case{background:var(--bg)}
+  .case-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+  .case-img{background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:30px}
+  .case-img .ph{font-size:80px}
+  .case-body{padding:34px}
+  .case-body h3{font-size:21px;margin-bottom:18px}
+  .case-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+  .pricecmp{display:flex;gap:30px;margin:18px 0}
+  .pricecmp .pc{flex:1;text-align:center;padding:16px;border-radius:12px}
+  .pricecmp .pc.other{background:#fbeaea;border:1px solid #f1c9c9}
+  .pricecmp .pc.us{background:#e7f6ee;border:1px solid #bfe6cf}
+  .pricecmp .pc .lab{font-size:12px;color:var(--gray)}
+  .pricecmp .pc .val{font-size:26px;font-weight:800;margin-top:4px}
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 24px}
+  .why .ic{font-size:30px;margin-bottom:12px}
+  .why h4{font-size:18px;margin-bottom:8px}
+  .why p{font-size:14px;color:var(--gray)}
+  /* CONTACT */
+  .contact{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff}
+  .contact .sec-head h2,.contact .sec-head p{color:#fff}
+  .contact .sec-head p{color:#cdd9ec}
+  .conbox{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:36px;text-align:center;max-width:620px;margin:0 auto}
+  .conbox .wa{font-size:22px;font-weight:800;margin:14px 0}
+  .conbox a.btn{display:inline-block;margin-top:12px}
+  footer{background:#08182e;color:#9fb0c6;font-size:13px;text-align:center;padding:26px}
+  @media(max-width:860px){
+    .hero .wrap,.about-grid,.case-card{grid-template-columns:1fr}
+    .stats .wrap,.svc-grid,.facility-grid,.why-grid{grid-template-columns:1fr 1fr}
+    .heroart{margin-top:20px}
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand">
-      <img class="logo-img" src="assets/logos/hbb_orbit.png" alt="HB HuiBang" />
-      <div>
-        HuiBang Fulfillment
-        <small>东莞市惠帮电子商务有限公司</small>
-      </div>
-    </div>
-    <nav class="nav-links">
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <div class="logo">HuiBang<span>.</span>Fulfillment</div>
+    <div class="navlinks">
       <a href="#about">About</a>
-      <a href="#warehouse">Warehouse</a>
+      <a href="#facility">Facility</a>
       <a href="#services">Services</a>
       <a href="#case">Case</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
     <a class="cta" href="#contact">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>China Sourcing &amp; DDP Fulfillment for Shopify Stores</h1>
+      <!-- COPY NOTE: original said "We run our own warehouse". Softened to verified network to stay truthful (warehouse is a partner facility). Revert only if you accept the risk. -->
+      <p>We operate a verified warehouse network with up to <b>200,000 units/day</b> peak packing capacity — and ship <b>DDP door-to-door to the US in 5–12 days</b> by region. Real facility footage on request, not stock clips.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Talk to us on WhatsApp</a>
+        <a class="btn ghost" href="#case">See a live case</a>
+      </div>
+    </div>
+    <div class="heroart">
+      <!-- B类 品牌示意图形（内联SVG，免费、非设施照片，安全） -->
+      <svg viewBox="0 0 320 220" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="China to US shipping route illustration">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#27a3c4"/><stop offset="1" stop-color="#1c4fa0"/>
+          </linearGradient>
+        </defs>
+        <rect width="320" height="220" rx="14" fill="#0b1f3a"/>
+        <path d="M40 150 Q160 30 280 120" fill="none" stroke="url(#g)" stroke-width="3" stroke-dasharray="6 6"/>
+        <circle cx="40" cy="150" r="7" fill="#27a3c4"/>
+        <circle cx="280" cy="120" r="7" fill="#e0a93b"/>
+        <text x="34" y="172" fill="#9fd" font-size="12">CN</text>
+        <text x="262" y="142" fill="#e0a93b" font-size="12">US</text>
+        <g fill="#cdd9ec" font-size="11" opacity=".85">
+          <rect x="120" y="86" width="26" height="14" rx="2"/><rect x="150" y="74" width="26" height="14" rx="2"/><rect x="180" y="64" width="26" height="14" rx="2"/>
+        </g>
+        <text x="160" y="200" fill="#cdd9ec" font-size="11" text-anchor="middle">DDP Door-to-Door · 5–12 days</text>
+      </svg>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<!-- STATS -->
+<div class="stats">
   <div class="wrap">
-    <div class="badge">🇨🇳 <b>Dongguan Huibang E-Commerce Co., Ltd.</b> · 6 yrs fulfillment · DDP to the US</div>
-    <h1>China Sourcing &amp; <span class="hl">DDP Fulfillment</span><br/>for Shopify Stores</h1>
-    <p class="sub">We run our own warehouse with up to 200,000 units/day peak packing capacity — and ship DDP door-to-door to the US in 5–12 days depending on region.</p>
-    <div class="actions">
-      <a class="btn primary" href="#contact">Request a DDP Quote</a>
-      <a class="btn ghost" href="#warehouse">See the Facility</a>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><div class="num">200K</div><div class="lbl">Peak units / day capacity</div></div>
-      <div class="stat"><div class="num">5–12d</div><div class="lbl">DDP door-to-door to US</div></div>
-      <div class="stat"><div class="num">2021</div><div class="lbl">Registered in Dongguan</div></div>
-      <div class="stat"><div class="num">30K</div><div class="lbl">Orders/day logistics network</div></div>
-    </div>
+    <div class="stat"><div class="n">200K</div><div class="l">Peak units / day capacity</div></div>
+    <div class="stat"><div class="n">5–12d</div><div class="l">DDP door-to-door to US</div></div>
+    <!-- COPY NOTE: registered Nov 2021 → ~4.75 yrs. "6 years" is false. Use "Since 2021". -->
+    <div class="stat"><div class="n">Since 2021</div><div class="l">Registered in Dongguan</div></div>
+    <div class="stat"><div class="n">30K</div><div class="l">Orders/day logistics network</div></div>
   </div>
-</section>
+</div>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="about">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">About the Company</div>
+      <div class="ey">About the Company</div>
       <h2>A registered Chinese e-commerce company you can verify</h2>
-      <p>We are not a one-person account. We are a registered company since Nov 2021 with 6 years of domestic e-commerce fulfillment behind us — a mature, closed-loop supply chain where sourcing, QC, DDP shipping and fulfillment all run on our own systems. Real facility, real volume, real rates.</p>
+      <p>Not a one-person account. A registered company with years of domestic e-commerce fulfillment behind it — a mature, closed-loop supply chain where sourcing, QC, DDP shipping and fulfillment are coordinated through verified partner systems.</p>
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <h3><span class="ic">🏢</span> Dongguan Huibang E-Commerce Co., Ltd.</h3>
-        <p>Registered Nov 5, 2021 in Dongguan, China. USCC: 91441900MA57DTGM4B. 6 years running domestic e-commerce fulfillment — we know every major Chinese sourcing platform inside out. A real company you can look up.</p>
+    <div class="about-grid">
+      <div>
+        <h3>Dongguan HuiBang E-Commerce Co., Ltd.</h3>
+        <!-- COPY NOTE: changed "6 years running" → "since 2021" for truthfulness -->
+        <p>Registered Nov 5, 2021 in Dongguan, China. USCC: 91441900MA57DTGM4B. Operating domestic e-commerce fulfillment since 2021 — we know every major Chinese sourcing platform inside out.</p>
+        <p>A real company you can look up. We show our work: real sourcing links, real shipping screenshots, real warehouse footage.</p>
       </div>
-      <div class="card">
-        <h3><span class="ic">📦</span> Our warehouse</h3>
-        <p>Our warehouse runs up to 200,000 units/day peak packing capacity. Real warehouse footage is available on request — you see exactly where your inventory moves.</p>
-      </div>
-      <div class="card">
-        <h3><span class="ic">🚚</span> Our logistics network = real rates</h3>
-        <p>Our network moves ~30,000 Shopify orders/day. That volume sits on our own carrier accounts and systems — it's what buys the DDP discount, not a markup.</p>
-      </div>
-      <div class="card">
-        <h3><span class="ic">🔍</span> Sourcing you can trust</h3>
-        <p>From 1688 to factory-direct, we find your products and verify quality before anything ships. No inflated promises — just real numbers, backed by 6 years of supply-chain work.</p>
+      <div>
+        <div style="border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-bottom:18px;">
+          <img src="images/warehouse-floor.jpg" alt="Warehouse packing floor" style="width:100%;display:block;">
+        </div>
+        <div class="regbox">
+          <div class="row"><span class="k">Legal name</span><span class="v">东莞市惠帮电子商务有限公司</span></div>
+          <div class="row"><span class="k">Registered</span><span class="v">Nov 5, 2021</span></div>
+          <div class="row"><span class="k">USCC</span><span class="v">91441900MA57DTGM4B</span></div>
+          <div class="row"><span class="k">HQ</span><span class="v">Dongguan, China</span></div>
+          <div class="row"><span class="k">Core</span><span class="v">Sourcing · QC · DDP · Fulfillment</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WAREHOUSE -->
-<section id="warehouse">
+<!-- FACILITY — A类 真实设施图位（放你朋友仓库实拍） -->
+<section id="facility">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">The Facility</div>
+      <div class="ey">The Facility</div>
       <h2>Real warehouse. Real throughput.</h2>
-      <p>We don't rent a room and call it a warehouse. Here's what the operation actually does.</p>
+      <p>We don't rent a room and call it a warehouse. Below are slots for <b>real footage from our verified partner facility</b> — shoot at the warehouse you have access to and drop the photos in. 24/7 footage available on request.</p>
     </div>
-    <div class="wh-grid">
-      <div class="wh"><div class="big">200K</div><h4>Units / day peak</h4><p>Peak packing and dispatch capacity at our own facility.</p></div>
-      <div class="wh"><div class="big">QC</div><h4>Check before pack</h4><p>Every batch is inspected and repacked to your spec before leaving the warehouse.</p></div>
-      <div class="wh"><div class="big">DDP</div><h4>China → US direct</h4><p>Duty paid, door-to-door. Your customer receives without extra fees.</p></div>
-      <div class="wh"><div class="big">5–12d</div><h4>US transit</h4><p>DDP timing by region — verified on live trial orders (see case below).</p></div>
-      <div class="wh"><div class="big">24/7</div><h4>Footage on request</h4><p>Ask for real warehouse video — we'll show you the floor, not a stock clip.</p></div>
-      <div class="wh"><div class="big">B2B</div><h4>Contract-based</h4><p>Registered company, written terms. You deal with a business, not a username.</p></div>
+    <div class="facility-grid">
+      <div class="shot" style="background-image:url('images/warehouse-floor.jpg')">
+        <div class="tag">Warehouse floor</div>
+        <div class="hint">Packing & dispatch zone</div>
+      </div>
+      <div class="shot" style="background-image:url('images/packing-line.jpg')">
+        <div class="tag">Packing line</div>
+        <div class="hint">Carton sealing & sorting</div>
+      </div>
+      <div class="shot" style="background-image:url('images/inventory-stacks.jpg')">
+        <div class="tag">Inventory stacks</div>
+        <div class="hint">Palletized goods ready to ship</div>
+      </div>
+      <div class="shot" style="background-image:url('images/bulk-storage.jpg')">
+        <div class="tag">Bulk storage</div>
+        <div class="hint">High-volume holding area</div>
+      </div>
+      <div class="shot" style="background-image:url('images/team-jack-1.jpg')">
+        <div class="tag">Team on site</div>
+        <div class="hint">Jack, co-founder, on the floor</div>
+      </div>
+      <div class="shot" style="background-image:url('images/team-jack-2.jpg')">
+        <div class="tag">Floor ready</div>
+        <div class="hint">Stock staged for daily dispatch</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="about">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">What We Do</div>
+      <div class="ey">What We Do</div>
       <h2>From product hunt to doorstep</h2>
-      <p>One integrated system for the whole back-end — sourcing, QC, DDP and fulfillment in a closed loop — so you can focus on growing the store.</p>
+      <p>One integrated back-end — sourcing, QC, DDP and fulfillment in a closed loop — so you focus on growing the store.</p>
     </div>
+    <div class="svc-grid">
       <div class="svc">
-        <div class="item"><div><div class="n">01</div><h4>Product Sourcing</h4><p>1688 and factory-direct, on our own sourcing system. We find your item, confirm spec, and quote the real cost.</p></div></div>
-        <div class="item"><div><div class="n">02</div><h4>QC &amp; Repacking</h4><p>Inspection, custom packaging, and private-label options before fulfillment — all in-house.</p></div></div>
-        <div class="item"><div><div class="n">03</div><h4>DDP Shipping</h4><p>Door-to-door to US/EU with duty prepaid, on our own carrier accounts. No surprise fees for your customer.</p></div></div>
-        <div class="item"><div><div class="n">04</div><h4>Fulfillment at scale</h4><p>From sample runs to 200K units/day on our own floor. Capacity grows with your store.</p></div></div>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <h4>01 · Product Sourcing</h4>
+        <p>1688 and factory-direct. We find your item, confirm spec, and quote the real cost — no inflated numbers.</p>
       </div>
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16v10H4z"/><path d="M4 11h16M9 17v3M15 17v3"/></svg>
+        <h4>02 · QC &amp; Repacking</h4>
+        <p>Inspection, custom packaging, and private-label options before fulfillment — all coordinated in-house.</p>
+      </div>
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8"/></svg>
+        <h4>03 · DDP Shipping</h4>
+        <p>Door-to-door to US/EU with duty prepaid, on verified carrier accounts. No surprise fees for your customer.</p>
+      </div>
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="1"/><path d="M3 10h18M8 19v3M16 19v3"/></svg>
+        <h4>04 · Fulfillment at scale</h4>
+        <p>From sample runs to 200K units/day on our partner floor. Capacity grows with your store.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CASE -->
-<section id="case">
+<!-- LIVE CASE -->
+<section id="case" class="case">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">Live Case</div>
+      <div class="ey">Live Case</div>
       <h2>A real order, real numbers</h2>
     </div>
-    <div class="case">
-      <div>
-        <h3>Pet splash-proof bowl · 2000ml · 589g</h3>
-        <ul>
-          <li>🛒 <span><b>1688 cost:</b> ¥15 per unit — we show you the source link.</span></li>
-          <li>🚚 <span><b>Our DDP quote:</b> $12 to the US, duty paid.</span></li>
-          <li>📉 <span><b>Mainstream platform:</b> ~$13.80 for the same route and DDP terms.</span></li>
-          <li>⏱️ <span><b>Transit:</b> 5–12 days door-to-door by region, fully tracked.</span></li>
-          <li>✅ <span><b>Proof:</b> ran free of charge as a trial, with screenshots on file.</span></li>
-        </ul>
+    <div class="case-card">
+      <!-- A类 真实产品图位：放 1688 产品实拍 / 物流截图 -->
+      <div class="case-img">
+        <div>
+          <div class="ph">🐶</div>
+          <div style="margin-top:10px;font-size:14px;opacity:.85">Pet splash-proof bowl · 2000ml · 589g</div>
+          <div style="margin-top:6px;font-size:12px;opacity:.7">（放入产品实拍 / 物流轨迹截图）</div>
+        </div>
       </div>
-      <div class="pricetag">
-        <div class="vs">Mainstream platform</div>
-        <div class="comp">~$13.80</div>
-        <div class="vs">We quoted</div>
-        <div class="ours">$12.00</div>
-        <div class="days">⏱️ 5–12 days door-to-door</div>
+      <div class="case-body">
+        <h3>Pet splash-proof bowl · 2000ml · 589g</h3>
+        <div class="case-row"><span>1688 cost</span><b>¥15 / unit (source link shown)</b></div>
+        <div class="case-row"><span>Our DDP quote</span><b>$12 to US, duty paid</b></div>
+        <div class="case-row"><span>Transit</span><b>5–12 days door-to-door</b></div>
+        <div class="pricecmp">
+          <div class="pc other"><div class="lab">Mainstream platform</div><div class="val">~$13.80</div></div>
+          <div class="pc us"><div class="lab">We quoted</div><div class="val">$12.00</div></div>
+        </div>
+        <p style="font-size:13.5px;color:var(--gray)">✅ Ran free of charge as a trial, with screenshots on file. Proof &gt; promises.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
-<section>
+<section id="why">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">Why HuiBang</div>
-      <h2>Built for stores that are past the testing phase</h2>
+      <div class="ey">Why HuiBang</div>
+      <h2>Built for stores past the testing phase</h2>
     </div>
-      <div class="why">
-        <div class="w"><div class="ic">🏛️</div><h4>Registered company</h4><p>东莞市惠帮电子商务有限公司, registered Nov 2021, USCC 91441900MA57DTGM4B. 6 years of domestic e-commerce fulfillment — we know Chinese supply chains cold.</p></div>
-        <div class="w"><div class="ic">🎥</div><h4>Proof, not promises</h4><p>Real warehouse footage, real sourcing links, real shipping screenshots. We show our work.</p></div>
-        <div class="w"><div class="ic">💰</div><h4>Lower cost, same lane</h4><p>Most platforms add a layer of markup on the same US DDP route. We run on our own logistics network, so the same lane costs you less — verified by the live case above.</p></div>
-      </div>
+    <div class="why-grid">
+      <div class="why"><div class="ic">🏛️</div><h4>Registered company</h4><p>东莞市惠帮电子商务有限公司, registered 2021, USCC 91441900MA57DTGM4B. We know Chinese supply chains cold.</p></div>
+      <div class="why"><div class="ic">🎥</div><h4>Proof, not promises</h4><p>Real warehouse footage, real sourcing links, real shipping screenshots. We show our work — never a stock clip.</p></div>
+      <div class="why"><div class="ic">💰</div><h4>Lower cost, same lane</h4><p>Most platforms add markup on the same US DDP route. On our verified logistics network, the same lane costs you less.</p></div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="box">
-      <h2>Get a DDP Quote</h2>
-      <p>Tell us what you sell or want to source. We'll check factory price + DDP shipping and reply with real numbers.</p>
-      <a class="wa" href="https://wa.me/8618026540852">📱 WhatsApp: +86 180 2654 0852</a>
-      <div class="note">
-        We work with <b>established Shopify stores doing serious volume</b> — sellers who already know their winning products and need a lower-cost, mature supply chain behind them.<br/>
-        If you're still testing products or learning the basics, this isn't the right fit yet — we focus our capacity on stores that can scale, not beginners.
-      </div>
+    <div class="sec-head">
+      <div class="ey">Contact</div>
+      <h2>Get a real DDP quote</h2>
+      <p>Send your product link or SKU. We reply with the real 1688 cost and a duty-paid US quote — usually within a day.</p>
+    </div>
+    <div class="conbox">
+      <div>WhatsApp (fulfillment line)</div>
+      <div class="wa">+86 180 2654 0852</div>
+      <a class="btn primary" href="https://wa.me/8618026540852">Chat on WhatsApp</a>
+      <p style="margin-top:14px;font-size:13px;opacity:.8">Or email your sourcing link — we'll send the breakdown.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <b>东莞市惠帮电子商务有限公司</b> · Dongguan Huibang E-Commerce Co., Ltd.<br/>
-    Registered Nov 2021 · USCC 91441900MA57DTGM4B · China Sourcing &amp; DDP Fulfillment · WhatsApp +86 180 2654 0852
-  </div>
+  © 2026 Dongguan HuiBang E-Commerce Co., Ltd. · China Sourcing &amp; DDP Fulfillment
 </footer>
 
 </body>
